@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Dashboard Page</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+	<br>
+	
+	<h2 style="color: purple;">Dashboard Page</h2>
+	<div class="card" style="width: 78rem;">
+		<div class="card-header">Random Quote</div>
+		<div class="card-body">
+			<p class="card-text">Quote ID : <span th:text="${dQuote.id}"></span></p>
+			<p class="card-text">Quote : <span th:text="${dQuote.quote}"></span></p>
+			<p class="card-text">Author : <span th:text="${dQuote.author}"></span></p>
+			
+			<!-- Button to refresh the page and get a new quote -->
+			<a href="/dashboard" class="btn btn-primary">Get New Quote</a>
+		</div>
+	
+	</div>
+	<table>
+		<tr>
+		<td></td>
+		<td>&nbsp;&nbsp;<a href="/">Logout</a></td>
+		</tr>
+	</table>
+</body>
+</html>
